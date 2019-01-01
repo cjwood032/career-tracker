@@ -13,7 +13,7 @@ class Career extends Component {
     return (
       <div>
         <li>
-          {career.text}
+          {career.title}
           <button onClick={this.handleClick}> X </button>
           <DetailsContainer career={career}/>
         </li>

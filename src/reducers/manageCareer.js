@@ -8,9 +8,8 @@ export default function manageCareers(state = {
   }, action) {
     switch (action.type) {
   
-      case 'ADD_CAREER':
-  
-        const career = { text: action.text, id: cuidFn()};
+      case 'ADD_CAREER':  
+        const career = { title: action.title, link: action.link, id: cuidFn()};
         return { ...state, careers: state.careers.concat(career)}
   
       case 'DELETE_CAREER':
