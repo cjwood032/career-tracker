@@ -20,7 +20,7 @@ const mapStateToProps = ({details}) => {
 
 const mapDispatchToProps = dispatch => ({
    addDetail: detail => dispatch({type: 'ADD_DETAIL', detail }),
-   deleteDetaireal: id => dispatch({type: 'DELETE_DETAIL', id })
+   deleteDetail: id => dispatch({type: 'DELETE_DETAIL', id })
 })
 
 
