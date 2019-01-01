@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import CareerInput from '../components/careers/CareerInput'
 import Careers from '../components/careers/Careers'
 import {connect} from 'react-redux'
+
 class CareersContainer extends Component {
 
   render() {
