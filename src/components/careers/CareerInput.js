@@ -6,7 +6,10 @@ class CareerInput extends Component {
 
     this.state={
       title: '',
-      link: ''
+      company: '',
+      location: '',
+      link: '',
+      description: ''
     }
     this.handleChange = this.handleChange.bind(this);
 }
@@ -19,10 +22,13 @@ class CareerInput extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addCareer(this.state.title, this.state.link)
+    this.props.addCareer(this.state.title, this.state.link, this.state.company, this.state.location, this.state.description)
     this.setState({
       title: '',
-      link: ''
+      company: '',
+      location: '',
+      link: '',
+      description: ''
     })
   }
   render() {
@@ -30,7 +36,10 @@ class CareerInput extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           Title<input type="text" name="title" onChange={this.handleChange}/>
+          Company<input type="text" name="company" onChange={this.handleChange}/><br></br>
           URL<input type="url" name="link" onChange={this.handleChange}/>
+          Location<input type="text" name="location" onChange={this.handleChange}/><br/>
+          Description<textarea value={this.state.value} onChange={this.handleChange} />
           <input type="submit" />
         </form>
       </div>

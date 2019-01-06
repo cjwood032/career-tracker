@@ -19,7 +19,7 @@ const mapStateToProps = state => ({careers: state.careers})
 
 const mapDispatchToProps = dispatch => {
   return {
-    addCareer: (title, link) => dispatch({type: "ADD_CAREER", title, link}),
+    addCareer: (title, link, company, location, description) => dispatch({type: "ADD_CAREER", title, link, company, location, description}),
     deleteCareer: id => dispatch({type: "DELETE_CAREER", id})
   }
 }
