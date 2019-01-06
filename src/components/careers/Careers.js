@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Career from './Career'
 class Careers extends Component {
+
   render() {
     const { careers, deleteCareer} = this.props;
     const careerList = careers.map(career => {
