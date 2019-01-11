@@ -10,6 +10,28 @@ export default function manageCareers(state = {
   
       case 'ADD_CAREER':
         const career = { title: action.title, link: action.link, company: action.company, location: action.location, description: action.description, id: cuidFn()};
+        fetch('http://localhost:3001/api/careers', { 
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title: career.title,
+          link: career.link,
+          company: career.company,
+          location: career.location,
+          description: career.description,
+          id: career.id
+
+        })
+      })
+      .then(function(response) {
+        //debugger
+        return response.json()
+      }).then(function(body) {
+        console.log(body);
+      });
         return { ...state, careers: state.careers.concat(career)}
   
       case 'DELETE_CAREER':
