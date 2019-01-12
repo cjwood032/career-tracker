@@ -6,5 +6,3 @@ export function fetchCareers() {
         .then(careers => dispatch({ type: "FETCH_CAREERS", payload: careers}));
     };
 }
-    
-   

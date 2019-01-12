@@ -35,6 +35,10 @@ export default function manageCareers(state = {
         return { ...state, careers: state.careers.concat(career)}
   
       case 'DELETE_CAREER':
+
+        
+        fetch( 'http://localhost:3001/api/careers/' + action.id, {
+        method: 'delete'})
         const careers = state.careers.filter(career => career.id !== action.id);
         return { ...state, careers}
       
