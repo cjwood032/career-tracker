@@ -37,6 +37,11 @@ export default function manageCareers(state = {
       case 'DELETE_CAREER':
         const careers = state.careers.filter(career => career.id !== action.id);
         return { ...state, careers}
+      
+      case 'LOADING_CAREERS':
+        return {...state, loading: true}
+      case 'FETCH_CAREERS':
+        return {loading: false, careers: action.payload}
   
       case 'ADD_DETAIL':
   

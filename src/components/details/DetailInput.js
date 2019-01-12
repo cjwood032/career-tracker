@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import Details from './Details';
+import Details from './Details';
 
 class DetailInput extends Component {
   constructor(props){

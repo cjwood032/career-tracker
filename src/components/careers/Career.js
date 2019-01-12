@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DetailsContainer from '../../containers/DetailsContainer'
+//import DetailsContainer from '../../containers/DetailsContainer'
 
 class Career extends Component {
   handleClick= event=> {
@@ -15,7 +15,7 @@ class Career extends Component {
         <li>
           Title:{career.title}  <a href = {career.link}>link</a>
           <button onClick={this.handleClick}> X </button>
-          <DetailsContainer career={career}/>
+          
         </li>
       </div>
     );
@@ -23,3 +23,4 @@ class Career extends Component {
 };
 
 export default Career;
+// return to line 18<DetailsContainer career={career}/>
