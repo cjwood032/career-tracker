@@ -23,11 +23,9 @@ export default function manageCareers(state = {
           location: career.location,
           description: career.description,
           id: career.id
-
         })
       })
       .then(function(response) {
-        //debugger
         return response.json()
       }).then(function(body) {
         console.log(body);
@@ -35,8 +33,6 @@ export default function manageCareers(state = {
         return { ...state, careers: state.careers.concat(career)}
   
       case 'DELETE_CAREER':
-
-        
         fetch( 'http://localhost:3001/api/careers/' + action.id, {
         method: 'delete'})
         const careers = state.careers.filter(career => career.id !== action.id);
@@ -46,9 +42,16 @@ export default function manageCareers(state = {
         return {...state, loading: true}
       case 'FETCH_CAREERS':
         return {loading: false, careers: action.payload}
-  
+      
+      case 'SHOW_CAREER':
+      fetch( 'http://localhost:3001/api/careers/' + action.id)
+        .then(response => response.json())
+        .then(
+          
+         json => console.log({json})
+          )
+        return{...state}
       case 'ADD_DETAIL':
-  
         const detail = { text: action.detail.text, careerId: action.detail.careerId, id: cuidFn() };
         return { ...state, details: state.details.concat(detail) }
   

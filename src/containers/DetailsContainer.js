@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DetailInput from '../components/details/DetailInput'
-import Details from '../components/details/Details'
+//import Details from '../components/details/Details'
 import {connect} from 'react-redux'
 class DetailsContainer extends Component {
 
@@ -8,7 +8,7 @@ class DetailsContainer extends Component {
     return (
       <div>
         <DetailInput addDetail={this.props.addDetail} careerId={this.props.career.id}/>
-        <Details details={this.props.details} careerId={this.props.career.id} deleteDetail={this.props.deleteDetail}/>
+        
       </div>
     )
   }
@@ -25,3 +25,4 @@ const mapDispatchToProps = dispatch => ({
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailsContainer)
+// return to line 11 <Details details={this.props.details} careerId={this.props.career.id} deleteDetail={this.props.deleteDetail}/>
