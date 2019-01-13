@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import CareersContainer from './containers/CareersContainer'
-import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import './App.css';
-
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import Header from './components/Header'
+import Main from './components/MainRouter'
 class App extends Component {
   
   render() {
     return (
-      <div className="App">
-        <CareersContainer />
-      </div>
+      <div className="container">
+          <Router>
+            <div>
+              <Header />
+              <Main />
+            </div>
+          </Router>
+        </div>
     );
   }
 };

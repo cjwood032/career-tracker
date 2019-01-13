@@ -3,15 +3,18 @@ import CareerInput from '../components/careers/CareerInput'
 import Careers from '../components/careers/Careers'
 import {connect} from 'react-redux'
 import {fetchCareers} from '../actions/careerActions'
-
+import CareerRoutes from '../components/careers/Routes'
+import { Link } from 'react-router-dom';
 class CareersContainer extends Component {
 componentDidMount(){
-  this.props.fetchCareers()
+  this.props.fetchCareers() 
 }
+
   render() {
     return (
       <div>
-        add a career opening:<CareerInput addCareer={this.props.addCareer}/>
+        <button> <Link to="/Careers"> Careers </Link></button><button onClick={this.showForm}> <Link to="/Careers/CareerInput"> Add Career </Link></button>
+        <div><CareerInput addCareer={this.props.addCareer}/></div>
         <Careers careers={this.props.careers} showCareer= {this.props.showCareer} deleteCareer={this.props.deleteCareer}/>
       </div>
       //  
