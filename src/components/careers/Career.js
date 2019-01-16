@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import DetailsContainer from '../../containers/DetailsContainer'
+import { NavLink } from 'react-router-dom';
+//import DetailsContainer from '../../containers/DetailsContainer'
 class Career extends Component {
   handleClick= event=> {
     event.preventDefault()
@@ -17,8 +18,8 @@ class Career extends Component {
         <li>
           Title:{career.title}  <a href = {career.link}>link</a>
           <button onClick={this.handleClick}> Delete </button>
-          <button onClick={this.handleCareer}> Show </button>
-          <DetailsContainer career={career}/>
+          <div classname="CareerName"><button><NavLink to={`/Careers/${career.id}`} style={{textDecoration: 'none'}}>Show</NavLink></button></div>
+          
         </li>
       </div>
     );
@@ -26,4 +27,4 @@ class Career extends Component {
 };
 
 export default Career;
-// return to line 18<DetailsContainer career={career}/>
+// return to line 21 <DetailsContainer career={career}/>
