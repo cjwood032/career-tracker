@@ -9,7 +9,7 @@ export default function manageCareers(state = {
     switch (action.type) {
   
       case 'ADD_CAREER':
-        const career = { title: action.title, link: action.link, company: action.company, location: action.location, description: action.description, id: cuidFn()};
+        const career = { title: action.title, link: action.link, company: action.company, location: action.location, description: action.description};
         fetch('http://localhost:3001/api/careers', { 
         method: 'POST',
         headers: {
@@ -22,7 +22,7 @@ export default function manageCareers(state = {
           company: career.company,
           location: career.location,
           description: career.description,
-          id: career.id
+          
         })
       })
       .then(function(response) {
@@ -44,13 +44,7 @@ export default function manageCareers(state = {
         return {loading: false, careers: action.payload}
       
       case 'SHOW_CAREER':
-      fetch( 'http://localhost:3001/api/careers/' + action.id)
-        .then(response => response.json())
-        .then(
-          
-         json => console.log({json})
-          )
-        return{...state}
+        return {career: action.payload}
       case 'ADD_DETAIL':
         const detail = { text: action.detail.text, careerId: action.detail.careerId, id: cuidFn() };
         return { ...state, details: state.details.concat(detail) }
