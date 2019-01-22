@@ -42,7 +42,10 @@ export default function manageCareers(state = {
         return {...state, loading: true}
       case 'FETCH_CAREERS':
         return {loading: false, careers: action.payload}
-      
+      case 'GET_CAREERS_SUCCESS':
+        return action.careers
+
+
       case 'SHOW_CAREER':
         return {career: action.payload}
       case 'ADD_DETAIL':

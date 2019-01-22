@@ -12,7 +12,7 @@ componentDidMount(){
   render() {
     return (
       <div>
-        <button> <Link to="/Careers"> Careers </Link></button><button onClick={this.showForm}> <Link to="/Careers/CareerInput"> Add Career </Link></button>
+       
         <div><CareerInput addCareer={this.props.addCareer}/></div>
         <Careers careers={this.props.careers} showCareer= {this.props.showCareer} deleteCareer={this.props.deleteCareer}/>
       </div>

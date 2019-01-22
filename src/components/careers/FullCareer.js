@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import DetailsContainer from '../../containers/DetailsContainer'
 import {connect} from 'react-redux'
-import {fetchCareers} from '../../actions/careerActions'
+import {getCareers} from '../../actions/careerActions'
 class FullCareer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount(){
-   this.props.fetchCareers() 
+  
+  componentWillMount(){
+   //this.props.getCareers() 
+    debugger
   }
   
   render() {
@@ -38,5 +37,5 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps, {fetchCareers}) (FullCareer);
+export default connect(mapStateToProps, {getCareers}) (FullCareer);
 // return to line 18<DetailsContainer career={career}/>
