@@ -15,16 +15,3 @@ export function fetchCareer(id){
     
     };
 }
-const setCareers = careers => {
-    return {
-        type: 'GET_CAREERS_SUCCESS',
-        careers
-    }
-}
-export const getCareers = () => {
-    return (dispatch) => {
-        return fetch('http://localhost:3001/api/careers')
-        .then(response => response.json())
-        .then(careers => dispatch(setCareers(careers)))
-    }
-}

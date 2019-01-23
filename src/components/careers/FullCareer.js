@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import DetailsContainer from '../../containers/DetailsContainer'
 import {connect} from 'react-redux'
-import {getCareers} from '../../actions/careerActions'
+import {fetchCareers} from '../../actions/careerActions'
 class FullCareer extends React.Component {
   
   componentWillMount(){
-   //this.props.getCareers() 
-    debugger
+   this.props.fetchCareers() 
+    //debugger
   }
   
   render() {
     const paramsCareerId= parseInt(this.props.match.params.id)
-
     const filteredItem = this.props.careers.filter(career => career.id===paramsCareerId)
-
     const filteredArray = filteredItem.map(career =>
       <div className="CareerContainer" key={career.id}>
-      <p className="CareerName" src={career.title}/>
-      <h4 className="CareerLink"> {career.link} </h4>
+      <h2 className="CareerCompany">Company: {career.company}</h2>
+      <h3 className="CareerName" src={career.title}>Position Title: {career.title}</h3>
+      <a href={career.link} className="CareerLink"> {career.link} </a>
       <p className="CareerDescription"> {career.description} </p>
       </div>
     )
@@ -25,7 +24,6 @@ class FullCareer extends React.Component {
     return (
       <div className="CareerPage">
         {filteredArray}
-        
       </div>
       )
   }
@@ -33,9 +31,12 @@ class FullCareer extends React.Component {
 
 const mapStateToProps = (state) => {
   return({
-  career: state.career
+  careers: state.careers
   })
 }
-
-export default connect(mapStateToProps, {getCareers}) (FullCareer);
+const mapDispatchToProps = dispatch => {
+  return{
+  fetchCareers: () => dispatch(fetchCareers())}
+}
+export default connect(mapStateToProps, mapDispatchToProps) (FullCareer);
 // return to line 18<DetailsContainer career={career}/>
