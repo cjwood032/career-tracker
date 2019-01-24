@@ -10,7 +10,12 @@ class Detail extends Component {
     return (
       <div>
         <li>
-          {this.props.detail.text}
+        {this.props.detail.step}
+        {this.props.detail.updateDate}
+        {this.props.detail.lastContact}
+        {this.props.detail.contactEmail}
+        {this.props.detail.contactName}
+        {this.props.detail.contactTitle}
         </li>
         <button onClick={this.handleClick}> X </button>
       </div>

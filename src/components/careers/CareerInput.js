@@ -39,7 +39,7 @@ class CareerInput extends Component {
           Company<input type="text" name="company" onChange={this.handleChange}/><br></br>
           URL<input type="url" name="link" onChange={this.handleChange}/>
           Location<input type="text" name="location" onChange={this.handleChange}/><br/>
-          Description<textarea value={this.state.value} onChange={this.handleChange} />
+          Description<textarea name="description" value={this.state.value} onChange={this.handleChange} />
           <input type="submit" />
         </form>
       </div>

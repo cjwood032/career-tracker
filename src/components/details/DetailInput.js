@@ -5,7 +5,12 @@ class DetailInput extends Component {
   constructor(props){
     super(props)
     this.state={
-      step: 'saved'
+      step: 'saved',
+      updateDate: Date() ,
+      lastContact: '2001-01-01',
+      contactEmail: '',
+      contactName: '',
+      contactTitle: ''
     }
   }
 
@@ -17,9 +22,14 @@ class DetailInput extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addDetail({step: this.state.step, careerId: this.props.careerId })
+    this.props.addDetail({step: this.state.step, updateDate: this.state.updateDate, lastContact: this.state.lastContact, contactEmail: this.state.contactEmail, contactName: this.state.contactName, contactTitle: this.state.contactTitle, careerId: this.props.careerId })
     this.setState({
-      step: 'saved'
+      step: 'saved',
+      updateDate: Date() ,
+      lastContact: '2001-01-01',
+      contactEmail: '',
+      contactName: '',
+      contactTitle: ''
     })
   }
   render() {
@@ -37,7 +47,11 @@ class DetailInput extends Component {
               <option value="secondFol">2nd follow up</option>
             </select>
           </label>
-          cover letter sent<input type="file" />
+          Latest update date:<input type="date" name="updateDate" onChange={this.handleChange}/>
+          Date of last contact:<input type="date" name="lastContact" onChange={this.handleChange}/>
+          <input type="text" name="contactEmail" onChange={this.handleChange}/>
+          <input type="text" name="contactName" onChange={this.handleChange}/>
+          <input type="text" name="contactTitle" onChange={this.handleChange}/>
           <input type="submit"/>
         </form>
       </div>
