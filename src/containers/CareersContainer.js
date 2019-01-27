@@ -12,8 +12,7 @@ componentDidMount(){
   render() {
     return (
       <div>
-       
-        <div><CareerInput addCareer={this.props.addCareer}/></div>
+        <CareerInput addCareer={this.props.addCareer}/>
         <Careers careers={this.props.careers} showCareer= {this.props.showCareer} deleteCareer={this.props.deleteCareer}/>
       </div>
       //  

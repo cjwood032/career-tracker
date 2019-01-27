@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import DetailsContainer from '../../containers/DetailsContainer'
+import React from 'react';
 import {connect} from 'react-redux'
+import DetailsContainer from '../../containers/DetailsContainer'
 import {fetchCareers} from '../../actions/careerActions'
 class FullCareer extends React.Component {
   
@@ -17,7 +17,8 @@ class FullCareer extends React.Component {
       <h2 className="CareerCompany">Company: {career.company}</h2>
       <h3 className="CareerName" src={career.title}>Position Title: {career.title}</h3>
       <a href={career.link} className="CareerLink"> {career.link} </a>
-      <p className="CareerDescription"> {career.description} </p>
+      <p className="CareerDescription">~Description~<br></br>{career.description} </p>
+      <DetailsContainer career={career}/>
       </div>
     )
 
@@ -25,6 +26,7 @@ class FullCareer extends React.Component {
       <div className="CareerPage">
         {filteredArray}
       </div>
+      
       )
   }
 };
