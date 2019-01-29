@@ -41,22 +41,23 @@ export default function manageCareers(state = {
       case 'FETCH_CAREERS':
         return {loading: false, careers: action.payload}
       case 'SHOW_CAREER':
+        debugger
         return {career: action.payload}
       case 'LOADING_DETAILS':
         return {...state, loading: true}
       case 'FETCH_DETAILS':
-        return  {loading:false, details: action.payload}
+        return {loading: false, details: action.payload}
       case 'ADD_DETAIL':
       // step, updateDate, lastContact, contactEmail, contanctName, contactTitle
         const detail = { step: action.detail.step, updateDate: action.detail.updateDate, lastContact: action.detail.lastContact, contactEmail: action.detail.contactEmail, contanctName: action.detail.contactName, contactTitle: action.detail.contactTitle, careerId: action.detail.careerId, };
-        fetch('http://localhost:3001/api/careers/'+ action.detail.careerId+'/details', { 
+        fetch('http://localhost:3001/api/details', { 
           method: 'POST',
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            career_id: detail.careerId,
+            company: detail.company,
             step: detail.step,
             update_date: detail.updateDate,
             last_contact: detail.lastContact,
@@ -69,11 +70,12 @@ export default function manageCareers(state = {
         .then(function(response) {
           return response.json()
         }).then(function(body) {
-          console.log(body);
         });
         return { ...state, details: state.details.concat(detail) }
   
       case 'DELETE_DETAIL':
+      fetch( 'http://localhost:3001/api/details/' + action.id, {
+        method: 'delete'})
         const details = state.details.filter(detail => detail.id !== action.id);
         return {...state, details }
   

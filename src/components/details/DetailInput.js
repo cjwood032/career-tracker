@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Details from './Details';
+
 
 class DetailInput extends Component {
   constructor(props){
     super(props)
     this.state={
-      step: 'saved',
+      company: '',
       updateDate: Date() ,
       lastContact: Date(),
       contactEmail: '',
@@ -24,7 +24,7 @@ class DetailInput extends Component {
     event.preventDefault()
     this.props.addDetail({step: this.state.step, updateDate: this.state.updateDate, lastContact: this.state.lastContact, contactEmail: this.state.contactEmail, contactName: this.state.contactName, contactTitle: this.state.contactTitle, careerId: this.props.careerId })
     this.setState({
-      step: 'saved',
+      company: '',
       updateDate: Date() ,
       lastContact: Date(),
       contactEmail: '',
@@ -36,17 +36,9 @@ class DetailInput extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Application Step
-            <select value={this.state.value} onChange={this.handleChange}>
-              <option value="saved">Saved</option>
-              <option value="applied">Applied</option>
-              <option value="firstInt">1st interview</option>
-              <option value="firstFol">1st follow up</option>
-              <option value="secondInt">2nd interview</option>
-              <option value="secondFol">2nd follow up</option>
-            </select>
-          </label>
+          Company:<input type="text" name="company" onChange={this.handleChange}/>
+          <br/>
+          
           Date of last update:<input type="date" name="updateDate" onChange={this.handleChange}/>
           Date of last contact:<input type="date" name="lastContact" onChange={this.handleChange}/>
           <br/>Contact Email:<input type="text" name="contactEmail" onChange={this.handleChange}/>

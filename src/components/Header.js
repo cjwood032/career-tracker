@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
           <li><Link to="/">Home</Link></li>
           <li><Link to="/About"> About </Link></li>
           <li><Link to="/Careers"> Careers </Link></li>
-          <li><Link to="/Documents"> Your Documents </Link></li>
+          <li><Link to="/Details"> Contacts</Link></li>
           
         </ul>
         </div>

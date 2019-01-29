@@ -8,6 +8,7 @@ export function fetchCareers() {
 }
 
 export function fetchCareer(id){
+    debugger
     return (dispatch) => {
         return fetch( 'http://localhost:3001/api/careers/' + id)
         .then(response => response.json())

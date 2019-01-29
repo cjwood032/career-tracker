@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Career from './Career'
 
 class Careers extends Component {
-  componentDidMount() {
-    
-}
+
   render() {
     const { careers, deleteCareer, showCareer} = this.props;
     const careerList = careers.map(career => {

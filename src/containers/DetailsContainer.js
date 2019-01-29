@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 import DetailInput from '../components/details/DetailInput'
 import Details from '../components/details/Details'
 import {connect} from 'react-redux'
+import {fetchDetails} from '../actions/detailActions'
 class DetailsContainer extends Component {
-
+  componentDidMount(){
+    //debugger
+    this.props.fetchDetails()
+  }
   render() {
     return (
       <div>
-        <DetailInput addDetail={this.props.addDetail} careerId={this.props.career.id}/>
-        <Details details={this.props.details} careerId={this.props.career.id} deleteDetail={this.props.deleteDetail}/>
+        <DetailInput addDetail={this.props.addDetail}/>
+        <Details details={this.props.details} deleteDetail={this.props.deleteDetail}/>
       </div>
     )
   }
@@ -20,7 +24,8 @@ const mapStateToProps = ({details}) => {
 
 const mapDispatchToProps = dispatch => ({
    addDetail: (detail) => dispatch({type: "ADD_DETAIL", detail}),
-   deleteDetail: id => dispatch({type: 'DELETE_DETAIL', id })
+   deleteDetail: id => dispatch({type: 'DELETE_DETAIL', id }),
+   fetchDetails: () => dispatch(fetchDetails())
 })
 
 
