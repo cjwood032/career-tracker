@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import DetailsContainer from '../../containers/DetailsContainer'
+
 class Career extends Component {
   handleClick= event=> {
     event.preventDefault()

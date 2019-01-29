@@ -4,9 +4,8 @@ import DetailsContainer from '../../containers/DetailsContainer'
 import {fetchCareers} from '../../actions/careerActions'
 class FullCareer extends React.Component {
   
-  componentWillMount(){
+  componentDidMount(){
    this.props.fetchCareers() 
-    //debugger
   }
   
   render() {

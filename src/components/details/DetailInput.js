@@ -7,7 +7,7 @@ class DetailInput extends Component {
     this.state={
       step: 'saved',
       updateDate: Date() ,
-      lastContact: '2001-01-01',
+      lastContact: Date(),
       contactEmail: '',
       contactName: '',
       contactTitle: ''
@@ -16,7 +16,7 @@ class DetailInput extends Component {
 
   handleChange=event => {
     this.setState({
-      text: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -26,7 +26,7 @@ class DetailInput extends Component {
     this.setState({
       step: 'saved',
       updateDate: Date() ,
-      lastContact: '2001-01-01',
+      lastContact: Date(),
       contactEmail: '',
       contactName: '',
       contactTitle: ''
@@ -47,11 +47,11 @@ class DetailInput extends Component {
               <option value="secondFol">2nd follow up</option>
             </select>
           </label>
-          Latest update date:<input type="date" name="updateDate" onChange={this.handleChange}/>
+          Date of last update:<input type="date" name="updateDate" onChange={this.handleChange}/>
           Date of last contact:<input type="date" name="lastContact" onChange={this.handleChange}/>
-          <input type="text" name="contactEmail" onChange={this.handleChange}/>
-          <input type="text" name="contactName" onChange={this.handleChange}/>
-          <input type="text" name="contactTitle" onChange={this.handleChange}/>
+          <br/>Contact Email:<input type="text" name="contactEmail" onChange={this.handleChange}/>
+          Contact Name:<input type="text" name="contactName" onChange={this.handleChange}/>
+          Contact Title:<input type="text" name="contactTitle" onChange={this.handleChange}/>
           <input type="submit"/>
         </form>
       </div>

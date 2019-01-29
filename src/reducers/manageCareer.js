@@ -1,6 +1,4 @@
 
-import cuid from 'cuid';
-export const cuidFn = cuid;
 
 export default function manageCareers(state = {
     careers: [],
@@ -44,8 +42,35 @@ export default function manageCareers(state = {
         return {loading: false, careers: action.payload}
       case 'SHOW_CAREER':
         return {career: action.payload}
+      case 'LOADING_DETAILS':
+        return {...state, loading: true}
+      case 'FETCH_DETAILS':
+        return  {loading:false, details: action.payload}
       case 'ADD_DETAIL':
-        const detail = { text: action.detail.text, careerId: action.detail.careerId, id: cuidFn() };
+      // step, updateDate, lastContact, contactEmail, contanctName, contactTitle
+        const detail = { step: action.detail.step, updateDate: action.detail.updateDate, lastContact: action.detail.lastContact, contactEmail: action.detail.contactEmail, contanctName: action.detail.contactName, contactTitle: action.detail.contactTitle, careerId: action.detail.careerId, };
+        fetch('http://localhost:3001/api/careers/'+ action.detail.careerId+'/details', { 
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            career_id: detail.careerId,
+            step: detail.step,
+            update_date: detail.updateDate,
+            last_contact: detail.lastContact,
+            contact_email: detail.contactEmail,
+            contact_name: detail.contactName,
+            contact_title: detail.contactTitle
+            
+          })
+        })
+        .then(function(response) {
+          return response.json()
+        }).then(function(body) {
+          console.log(body);
+        });
         return { ...state, details: state.details.concat(detail) }
   
       case 'DELETE_DETAIL':
