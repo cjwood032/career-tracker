@@ -4,20 +4,20 @@ class Detail extends Component {
   handleClick = event => {
     this.props.deleteDetail(this.props.detail.id)
   }
-  render() {
+  render() { 
     const { detail } = this.props
 
     return (
       <div>
-        <li>
-        {this.props.detail.step}
-        {this.props.detail.updateDate}
-        {this.props.detail.lastContact}
-        {this.props.detail.contactEmail}
-        {this.props.detail.contactName}
-        {this.props.detail.contactTitle}
-        </li>
-        <button onClick={this.handleClick}> X </button>
+        <button onClick={this.handleClick}>Delete</button>
+        Company: {this.props.detail.company}<br/>
+        Date of last update:{ this.props.detail.updateDate}<br/>
+        Date of last contact: {this.props.detail.lastContact}<br/>
+        Contact Name: {this.props.detail.contactName}<br/>
+        Contact Email:{this.props.detail.contactEmail}<br/>
+        Contact Title: {this.props.detail.contactTitle}
+        
+        
       </div>
     );
   }

@@ -40,6 +40,7 @@ class CareerInput extends Component {
           URL<input type="url" name="link" onChange={this.handleChange}/>
           Location<input type="text" name="location" onChange={this.handleChange}/><br/>
           Description<textarea name="description" value={this.state.value} onChange={this.handleChange} />
+          
           <input type="submit" />
         </form>
       </div>

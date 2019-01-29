@@ -48,8 +48,8 @@ export default function manageCareers(state = {
       case 'FETCH_DETAILS':
         return {loading: false, details: action.payload}
       case 'ADD_DETAIL':
-      // step, updateDate, lastContact, contactEmail, contanctName, contactTitle
-        const detail = { step: action.detail.step, updateDate: action.detail.updateDate, lastContact: action.detail.lastContact, contactEmail: action.detail.contactEmail, contanctName: action.detail.contactName, contactTitle: action.detail.contactTitle, careerId: action.detail.careerId, };
+  
+        const detail = { company: action.detail.company, step: action.detail.step, updateDate: action.detail.updateDate, lastContact: action.detail.lastContact, contactEmail: action.detail.contactEmail, contanctName: action.detail.contactName, contactTitle: action.detail.contactTitle, careerId: action.detail.careerId, };
         fetch('http://localhost:3001/api/details', { 
           method: 'POST',
           headers: {
@@ -70,6 +70,7 @@ export default function manageCareers(state = {
         .then(function(response) {
           return response.json()
         }).then(function(body) {
+          console.log(body)
         });
         return { ...state, details: state.details.concat(detail) }
   

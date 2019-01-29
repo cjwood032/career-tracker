@@ -22,7 +22,7 @@ class DetailInput extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addDetail({step: this.state.step, updateDate: this.state.updateDate, lastContact: this.state.lastContact, contactEmail: this.state.contactEmail, contactName: this.state.contactName, contactTitle: this.state.contactTitle, careerId: this.props.careerId })
+    this.props.addDetail({step: this.state.step, company: this.state.company, updateDate: this.state.updateDate, lastContact: this.state.lastContact, contactEmail: this.state.contactEmail, contactName: this.state.contactName, contactTitle: this.state.contactTitle, careerId: this.props.careerId })
     this.setState({
       company: '',
       updateDate: Date() ,
