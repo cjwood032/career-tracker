@@ -5,7 +5,6 @@ class Detail extends Component {
     this.props.deleteDetail(this.props.detail.id)
   }
   render() { 
-    const { detail } = this.props
 
     return (
       <div>

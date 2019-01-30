@@ -39,14 +39,14 @@ export default function manageCareers(state = {
       case 'LOADING_CAREERS':
         return {...state, loading: true}
       case 'FETCH_CAREERS':
-        return {loading: false, careers: action.payload}
+        return {...state, loading: false, careers: action.payload}
       case 'SHOW_CAREER':
         debugger
         return {career: action.payload}
       case 'LOADING_DETAILS':
         return {...state, loading: true}
       case 'FETCH_DETAILS':
-        return {loading: false, details: action.payload}
+        return {...state, loading: false, details: action.payload}
       case 'ADD_DETAIL':
   
         const detail = { company: action.detail.company, step: action.detail.step, updateDate: action.detail.updateDate, lastContact: action.detail.lastContact, contactEmail: action.detail.contactEmail, contanctName: action.detail.contactName, contactTitle: action.detail.contactTitle, careerId: action.detail.careerId, };
