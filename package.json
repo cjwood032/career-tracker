@@ -14,9 +14,7 @@
   "devDependencies": {
     "jsdom": "^9.9.1",
     "mocha": "^5.2.0",
-    "react-scripts": "1.1.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.2"
+    "react-scripts": "^2.1.3"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -24,12 +22,14 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
+    "bootstrap": "^4.2.1",
     "chai": "^4.1.2",
     "cuid": "^1.3.8",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "mocha-multi": "^1.0.1",
     "react": "^16.4.1",
+    "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
@@ -44,5 +44,11 @@
     "build": "react-scripts build",
     "test": "mocha -w test/helpers/browser.js test/*.js",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
