@@ -7,7 +7,7 @@ class App extends Component {
   
   render() {
     return (
-      <div className="container">
+      <div className="flex-container">
           <Router>
             <div>
               <Header />

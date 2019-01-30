@@ -34,7 +34,8 @@ class CareerInput extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <center><bold>Add an Opening:</bold></center>
+        <form className="CareerForm" onSubmit={this.handleSubmit}>
           Title<input type="text" name="title" onChange={this.handleChange}/>
           Company<input type="text" name="company" onChange={this.handleChange}/><br></br>
           URL<input type="url" name="link" onChange={this.handleChange}/>

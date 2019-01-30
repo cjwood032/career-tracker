@@ -1,9 +1,9 @@
 
 .nav{
-    background-color: lightcyan;
+    background-color: black;
     text-align: center;
 }
-.nav-links{
+.nav-item{
     font-family: 'Courier New', Courier, monospace;
 }
 .App-header {
@@ -16,4 +16,3 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
-  

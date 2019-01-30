@@ -17,9 +17,11 @@ class Careers extends Component {
     });
 
     return(
-      <ul>
-        {careerList}
-      </ul>
+      <div class="col-sm-4">
+        <ul className="CareerList">
+          {careerList}
+        </ul>
+      </div>
     );
   }
 };

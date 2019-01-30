@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class Career extends Component {
@@ -13,9 +13,10 @@ class Career extends Component {
     return (
       <div>
         <li>
-          Title:{career.title}  <a href = {career.link}>link</a>
-          <button onClick={this.handleClick}> Delete </button>
-          <div className="CareerName"><button ><NavLink to={`/Careers/${career.id}`} style={{textDecoration: 'none'}}>Show</NavLink></button></div>
+          Title:{career.title}  <br/><a href = {career.link}>link</a><br/>
+          <div className="CareerName"><button ><Link to={`/Careers/${career.id}`} style={{textDecoration: 'none'}}>Show</Link></button></div>
+          <button className="btn-sm btn-danger" onClick={this.handleClick}> Delete </button>
+          
           
         </li>
       </div>
