@@ -7,20 +7,20 @@ class Careers extends Component {
     const { careers, deleteCareer, showCareer} = this.props;
     const careerList = careers.map(career => {
       return (
+        <div className="col-sm-4" key={career.id}>
         <Career
             key={career.id}
             career={career}
             deleteCareer={deleteCareer}
             showCareer={showCareer}
         />
+        </div>
       )
     });
 
     return(
-      <div class="col-sm-4">
-        <ul className="CareerList">
+      <div className="row">
           {careerList}
-        </ul>
       </div>
     );
   }

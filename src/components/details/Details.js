@@ -7,17 +7,19 @@ class Details extends Component {
   const { details, deleteDetail} = this.props
   const detailList = details.map(detail =>{
     return (
+      <div class="col-sm-4">
       <Detail
         key={detail.id}
         detail={detail}
         deleteDetail={deleteDetail}
       />
+      </div>
     )
   });
     return (
-     <ul>
+     <div class="row">
        {detailList}
-     </ul>
+     </div>
     );
   }
 };

@@ -34,7 +34,7 @@ class CareerInput extends Component {
   render() {
     return (
       <div>
-        <center><bold>Add an Opening:</bold></center>
+        <center><b>Add an Opening:</b>
         <form className="CareerForm" onSubmit={this.handleSubmit}>
           Title<input type="text" name="title" onChange={this.handleChange}/>
           Company<input type="text" name="company" onChange={this.handleChange}/><br></br>
@@ -43,7 +43,7 @@ class CareerInput extends Component {
           Description<textarea name="description" value={this.state.value} onChange={this.handleChange} />
           
           <input type="submit" />
-        </form>
+        </form></center>
       </div>
     );
   }

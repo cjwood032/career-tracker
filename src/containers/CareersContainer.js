@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Career.css'
 import CareerInput from '../components/careers/CareerInput'
 import Careers from '../components/careers/Careers'
 import {connect} from 'react-redux'
@@ -12,9 +11,10 @@ componentDidMount(){
 
   render() {
     return (
-      <div class="row" name="careerContainer">
-        <Careers careers={this.props.careers} showCareer= {this.props.showCareer} deleteCareer={this.props.deleteCareer}/>
+      <div className="careerContainer">
         <CareerInput addCareer={this.props.addCareer}/>
+        <Careers careers={this.props.careers} showCareer= {this.props.showCareer} deleteCareer={this.props.deleteCareer}/>
+        
       </div>
       //  
     )

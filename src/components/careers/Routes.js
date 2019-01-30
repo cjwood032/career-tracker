@@ -1,7 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import FullCareer from './FullCareer'
-import Careers from './Careers'
 import CareerInput from './CareerInput'
 import CareersContainer from '../../containers/CareersContainer';
 

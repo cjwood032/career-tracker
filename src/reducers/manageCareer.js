@@ -28,7 +28,7 @@ export default function manageCareers(state = {
       }).then(function(body) {
         console.log(body);
       });
-        return { ...state, careers: state.careers.concat(career)}
+        return { ...state}
   
       case 'DELETE_CAREER':
         fetch( 'http://localhost:3001/api/careers/' + action.id, {
@@ -40,9 +40,6 @@ export default function manageCareers(state = {
         return {...state, loading: true}
       case 'FETCH_CAREERS':
         return {...state, loading: false, careers: action.payload}
-      case 'SHOW_CAREER':
-        debugger
-        return {career: action.payload}
       case 'LOADING_DETAILS':
         return {...state, loading: true}
       case 'FETCH_DETAILS':

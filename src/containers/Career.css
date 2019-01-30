@@ -1,8 +1,0 @@
-.row{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    font-size: calc(10px + 2vmin);
-
-}
-

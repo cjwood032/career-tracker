@@ -12,13 +12,9 @@ class Career extends Component {
     const { career } = this.props;
     return (
       <div>
-        <li>
-          Title:{career.title}  <br/><a href = {career.link}>link</a><br/>
+          Title: {career.title}  <br/><a href = {career.link}>link</a><br/>
           <div className="CareerName"><button ><Link to={`/Careers/${career.id}`} style={{textDecoration: 'none'}}>Show</Link></button></div>
           <button className="btn-sm btn-danger" onClick={this.handleClick}> Delete </button>
-          
-          
-        </li>
       </div>
     );
   }

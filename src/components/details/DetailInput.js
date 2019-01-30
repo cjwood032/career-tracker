@@ -37,7 +37,7 @@ class DetailInput extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           Company:<input type="text" name="company" onChange={this.handleChange}/>
-          <br/>
+        
           
           Date of last update:<input type="date" name="updateDate" onChange={this.handleChange}/>
           Date of last contact:<input type="date" name="lastContact" onChange={this.handleChange}/>
