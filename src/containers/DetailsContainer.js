@@ -5,7 +5,6 @@ import {connect} from 'react-redux'
 import {fetchDetails} from '../actions/detailActions'
 class DetailsContainer extends Component {
   componentDidMount(){
-    //debugger
     this.props.fetchDetails()
   }
   render() {
