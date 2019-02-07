@@ -12,19 +12,25 @@ componentDidMount(){
   render() {
     return (
       <div className="careerContainer">
-        <CareerInput addCareer={this.props.addCareer}/>
+        <CareerInput />
         <Careers careers={this.props.careers} showCareer= {this.props.showCareer} deleteCareer={this.props.deleteCareer}/>
+        
         
       </div>
       //  
+    // 
     )
   }
 }
-const mapStateToProps = state => ({careers: state.careers})
+const mapStateToProps = state => {
+  return ({
+    careers: state.careers
+  })
+}
+
 
 const mapDispatchToProps = dispatch => {
   return {
-    addCareer: (title, link, company, location, description) => dispatch({type: "ADD_CAREER", title, link, company, location, description}),
     deleteCareer: id => dispatch({type: "DELETE_CAREER", id}),
     showCareer: id => dispatch({type: "SHOW_CAREER", id}),
     fetchCareers: () => dispatch(fetchCareers())

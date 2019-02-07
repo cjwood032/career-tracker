@@ -1,46 +1,31 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux'
+import {createCareer} from '../../actions/careerActions'
+import {updateFormData} from '../../actions/formActions'
 class CareerInput extends Component {
-  constructor(props){
-    super(props)
 
-    this.state={
-      title: '',
-      company: '',
-      location: '',
-      link: '',
-      description: ''
+
+  handleChange = event => {
+    const currentFormData = Object.assign({}, this.props.formData, {[event.target.name]: event.target.value})
+      this.props.updateFormData(currentFormData)
     }
-    this.handleChange = this.handleChange.bind(this);
-}
-
-  handleChange (event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
+  
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addCareer(this.state.title, this.state.link, this.state.company, this.state.location, this.state.description)
-    this.setState({
-      title: '',
-      company: '',
-      location: '',
-      link: '',
-      description: ''
-    })
+    this.props.createCareer(this.props.formData)
   }
   render() {
+    const {title, company, link, location, description} = this.props.formData
     return (
       <div>
         <center><b>Add an Opening:</b>
         <form className="CareerForm" onSubmit={this.handleSubmit}>
-          Title<input type="text" name="title" onChange={this.handleChange}/>
-          Company<input type="text" name="company" onChange={this.handleChange}/>
-          URL<input type="url" name="link" onChange={this.handleChange}/>
-          Location<input type="text" name="location" onChange={this.handleChange}/><br/>
-          Description<textarea name="description" value={this.state.value} onChange={this.handleChange} />
+          Title<input type="text" name="title" value={title} onChange={this.handleChange}/>
+          Company<input type="text" name="company" value={company} onChange={this.handleChange}/>
+          URL<input type="url" name="link" value={link} onChange={this.handleChange}/>
+          Location<input type="text" name="location" value={location} onChange={this.handleChange}/><br/>
+          Description<textarea name="description" value={description} onChange={this.handleChange} />
           
           <input type="submit" />
         </form></center>
@@ -48,5 +33,10 @@ class CareerInput extends Component {
     );
   }
 };
+const mapStateToProps = state => {
+  return ({
+    formData: state.formData
+  })
+}
 
-export default CareerInput;
+export default connect(mapStateToProps, {createCareer, updateFormData})(CareerInput);

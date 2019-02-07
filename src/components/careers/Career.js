@@ -22,4 +22,3 @@ class Career extends Component {
 
 
 export default (Career);
-// return to line 21 <DetailsContainer career={career}/>
