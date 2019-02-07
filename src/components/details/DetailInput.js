@@ -1,54 +1,38 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux';
+import {createDetail} from '../../actions/detailActions'
+import {updateDetailFormData} from '../../actions/formActions'
 
 class DetailInput extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      company: '',
-      updateDate: Date() ,
-      lastContact: Date(),
-      contactEmail: '',
-      contactName: '',
-      contactTitle: ''
+  handleChange = event => {
+    const currentFormData = Object.assign({}, this.props.detailFormData, {[event.target.name]: event.target.value})
+      this.props.updateDetailFormData(currentFormData)
     }
-  }
 
-  handleChange=event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  handleSubmit = event => {
-    event.preventDefault()
-    this.props.addDetail({step: this.state.step, company: this.state.company, updateDate: this.state.updateDate, lastContact: this.state.lastContact, contactEmail: this.state.contactEmail, contactName: this.state.contactName, contactTitle: this.state.contactTitle, careerId: this.props.careerId })
-    this.setState({
-      company: '',
-      updateDate: Date() ,
-      lastContact: Date(),
-      contactEmail: '',
-      contactName: '',
-      contactTitle: ''
-    })
-  }
+    handleSubmit = event => {
+      event.preventDefault()
+      this.props.createDetail(this.props.detailFormData)
+    }
   render() {
+    const {company, updateDate, lastContact, contactEmail, contactName, contactTitle} = this.props.detailFormData
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          Company:<input type="text" name="company" onChange={this.handleChange}/>
-        
-          
-          Date of last update:<input type="date" name="updateDate" onChange={this.handleChange}/>
-          Date of last contact:<input type="date" name="lastContact" onChange={this.handleChange}/>
-          <br/>Contact Email:<input type="text" name="contactEmail" onChange={this.handleChange}/>
-          Contact Name:<input type="text" name="contactName" onChange={this.handleChange}/>
-          Contact Title:<input type="text" name="contactTitle" onChange={this.handleChange}/>
+          Company:<input type="text" name="company" value={company} onChange={this.handleChange}/>
+          Date of last update:<input type="date" name="updateDate" value={updateDate} onChange={this.handleChange}/>
+          Date of last contact:<input type="date" name="lastContact" value={lastContact} onChange={this.handleChange}/>
+          <br/>Contact Email:<input type="text" name="contactEmail" value={contactEmail} onChange={this.handleChange}/>
+          Contact Name:<input type="text" name="contactName" value={contactName} onChange={this.handleChange}/>
+          Contact Title:<input type="text" name="contactTitle" value={contactTitle} onChange={this.handleChange}/>
           <input type="submit"/>
         </form>
       </div>
     );
   }
 };
-
-export default DetailInput;
+const mapStateToProps = state => {
+  return ({
+    detailFormData: state.detailFormData
+  })
+}
+export default connect(mapStateToProps, {createDetail, updateDetailFormData})(DetailInput);

@@ -10,23 +10,23 @@ class DetailsContainer extends Component {
   render() {
     return (
       <div>
-        <DetailInput addDetail={this.props.addDetail}/>
+        <DetailInput />
         <Details details={this.props.details} deleteDetail={this.props.deleteDetail}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({details}) => {
-  return {details}
+const mapStateToProps = state => {
+  return({
+    details: state.details
+  })
 }
 
 const mapDispatchToProps = dispatch => ({
-   addDetail: (detail) => dispatch({type: "ADD_DETAIL", detail}),
    deleteDetail: id => dispatch({type: 'DELETE_DETAIL', id }),
    fetchDetails: () => dispatch(fetchDetails())
 })
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailsContainer)
-// return to line 11 

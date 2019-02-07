@@ -8,7 +8,7 @@ class Detail extends Component {
 
     return (
       <div>
-        <button onClick={this.handleClick}>Delete</button>
+        <button onClick={this.handleClick}>Delete</button><br/>
         Company: {this.props.detail.company}<br/>
         Date of last update:{ this.props.detail.updateDate}<br/>
         Date of last contact: {this.props.detail.lastContact}<br/>

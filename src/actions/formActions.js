@@ -5,9 +5,11 @@ export const updateFormData = formData => {
     }
   }
   
-  export const resetForm = () => {
+  
+  export const updateDetailFormData = detailFormData => {
     return {
-      type: 'RESET_FORM'
+      type: 'UPDATE_DETAIL_FORM_DATA',
+      detailFormData
     }
   }
   
