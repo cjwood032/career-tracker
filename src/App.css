@@ -16,3 +16,10 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
+.flex-container {
+    background-color: rgba(25, 25, 26, 0.041);
+}
+.about-page{
+    width: 500px;
+    margin-left: 100px
+}

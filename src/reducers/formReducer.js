@@ -1,5 +1,4 @@
 const initialState = {
-  
     title: '',
     company: '',
     location: '',
@@ -8,18 +7,17 @@ const initialState = {
   }
   
   function formDataReducer(state = initialState, action) {
-  
      switch(action.type) {
+
        case 'UPDATE_FORM_DATA':
         return action.formData
+
        case 'RESET_FORM':
         return initialState;
   
       default:
-      return state
+        return state
     }
-  
-  
   }
   export default formDataReducer
   

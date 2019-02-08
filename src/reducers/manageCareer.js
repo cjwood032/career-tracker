@@ -1,10 +1,9 @@
-
-
 function careersReducer(state = [], action) {
     switch (action.type) {
 
       case "CREATE_CAREER_SUCCESS":       
-	      return state.concat(action.career)
+        return state.concat(action.career)
+        
       case 'DELETE_CAREER':
         fetch( 'http://localhost:3001/api/careers/' + action.id, {
         method: 'delete'})

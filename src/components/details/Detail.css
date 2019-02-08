@@ -1,0 +1,11 @@
+.detailCard {
+    background-color: lightgray;
+    margin-bottom: 1.5rem;
+}
+.container{
+    display: flex;
+    align-content:  center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 5000;
+}

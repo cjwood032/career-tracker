@@ -14,20 +14,16 @@ componentDidMount(){
       <div className="careerContainer">
         <CareerInput />
         <Careers careers={this.props.careers} showCareer= {this.props.showCareer} deleteCareer={this.props.deleteCareer}/>
-        
-        
       </div>
-      //  
-    // 
     )
   }
 }
+
 const mapStateToProps = state => {
   return ({
     careers: state.careers
   })
 }
-
 
 const mapDispatchToProps = dispatch => {
   return {

@@ -7,6 +7,7 @@ class DetailsContainer extends Component {
   componentDidMount(){
     this.props.fetchDetails()
   }
+  
   render() {
     return (
       <div>
