@@ -2,7 +2,6 @@ function detailsReducer(state = [], action) {
     switch (action.type) {    
 
       case 'CREATE_DETAIL_SUCCESS':
-        console.log(action.detail)
         return state.concat(action.detail)
 
       case 'GET_DETAILS_SUCCESS':
