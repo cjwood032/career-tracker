@@ -4,20 +4,7 @@ import {connect} from 'react-redux';
 import {createDetail} from '../../actions/detailActions'
 import {updateDetailFormData} from '../../actions/formActions'
 // Timestamp, company, contact name and title, date, action, method contacted, is this the first time, source/referral, job title, link to announcement, notes
-// actions
-/*
 
-*/
-// Method contacted
-/*
-In-person
-Phone
-Video
-Direct Email
-LinkedIn Message
-LinkedIn Contact Request
-
-*/
 class DetailInput extends Component {
   handleChange = event => {
     const currentFormData = Object.assign({}, this.props.detailFormData, {[event.target.name]: event.target.value})
@@ -29,7 +16,7 @@ class DetailInput extends Component {
       this.props.createDetail(this.props.detailFormData)
     }
   render() {
-    const {company, action, updated, contacted, email, name, role} = this.props.detailFormData
+    const {company, action, method, first, updated, contacted, email, name, role} = this.props.detailFormData
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit}>
@@ -37,7 +24,7 @@ class DetailInput extends Component {
           Contact Name:<input type="text" name="name" value={name} onChange={this.handleChange}/>
           Contact Title:<input type="text" name="role" value={role} onChange={this.handleChange}/>
           {/* Date of last update:<input type="date" name="updated" value={updated} onChange={this.handleChange}/> */}
-          Date of last contact:<input type="date" name="contacted" value={contacted} onChange={this.handleChange}/>
+          <br/>Date:<input type="date" name="contacted" value={contacted} onChange={this.handleChange}/>
           Action: 
           <select value={action} onChange={this.handleChange}>
             <option value ="Net1">Networking: Outreach Email</option>
@@ -67,7 +54,15 @@ class DetailInput extends Component {
             <option value ="Other">Other</option>
           </select>
           <br/>Contact Email:<input type="text" name="email" value={email} onChange={this.handleChange}/>
-          
+          Method:
+          <select value={method} onChange={this.handleChange}>
+            <option value ="person">In-person</option>
+            <option value ="phone">Phone</option>
+            <option value ="video">Video</option>
+            <option value ="email">Direct Email</option>
+            <option value ="message">LinkedIn Message</option>
+            <option value ="contact">LinkedIn Contact Request</option>
+          </select>
           <input type="submit"/>
         </form>
       </div>
