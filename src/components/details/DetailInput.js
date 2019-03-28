@@ -16,15 +16,26 @@ class DetailInput extends Component {
       this.props.createDetail(this.props.detailFormData)
     }
   render() {
-    const {company, action, method, first, updated, contacted, email, name, role} = this.props.detailFormData
+    const {company, action, method, first, updated, referral, jobTitle, jobLink, notes, contacted, email, name, role} = this.props.detailFormData
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit}>
+          Date:<input type="date" name="contacted" value={contacted} onChange={this.handleChange}/>
           Company:<input type="text" name="company" value={company} onChange={this.handleChange}/>
+          Method:
+          <select value={method} onChange={this.handleChange}>
+            <option value ="person">In-person</option>
+            <option value ="phone">Phone</option>
+            <option value ="video">Video</option>
+            <option value ="email">Direct Email</option>
+            <option value ="message">LinkedIn Message</option>
+            <option value ="contact">LinkedIn Contact Request</option>
+          </select><br/>
           Contact Name:<input type="text" name="name" value={name} onChange={this.handleChange}/>
-          Contact Title:<input type="text" name="role" value={role} onChange={this.handleChange}/>
+          Title:<input type="text" name="role" value={role} onChange={this.handleChange}/>
+          Email:<input type="text" name="email" value={email} onChange={this.handleChange}/><br/>
           {/* Date of last update:<input type="date" name="updated" value={updated} onChange={this.handleChange}/> */}
-          <br/>Date:<input type="date" name="contacted" value={contacted} onChange={this.handleChange}/>
+          
           Action: 
           <select value={action} onChange={this.handleChange}>
             <option value ="Net1">Networking: Outreach Email</option>
@@ -52,17 +63,16 @@ class DetailInput extends Component {
             <option value ="Reject">Rejection</option>
             <option value ="Accepted">Offer Accepted</option>
             <option value ="Other">Other</option>
-          </select>
-          <br/>Contact Email:<input type="text" name="email" value={email} onChange={this.handleChange}/>
-          Method:
-          <select value={method} onChange={this.handleChange}>
-            <option value ="person">In-person</option>
-            <option value ="phone">Phone</option>
-            <option value ="video">Video</option>
-            <option value ="email">Direct Email</option>
-            <option value ="message">LinkedIn Message</option>
-            <option value ="contact">LinkedIn Contact Request</option>
-          </select>
+          </select><br/>
+          Source/Referral:<input type="text" name="referral" value={referral} onChange={this.handleChange}/>
+          Job Title:<input type="text" name="job title" value={jobTitle} onChange={this.handleChange}/>
+          Link:<input type="text" name="job link" value={jobLink} onChange={this.handleChange}/>
+          <br/>First time you are contacting this company/contact?
+          <select value={first} onChange={this.handleChange}>
+            <option value = "yes">Yes</option>
+            <option value = "no">No</option>
+          </select><br/>
+          Notes:<textarea name="notes" value={notes} onChange={this.handleChange} />
           <input type="submit"/>
         </form>
       </div>
