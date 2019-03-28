@@ -27,7 +27,6 @@ class Careers extends Component {
   }
   render() {
     if (this.state !== null) {
-      //debugger
       const { deleteCareer, showCareer} = this.props;
       var careerList = this.state.careerList.map(career => {
         return (
@@ -43,7 +42,7 @@ class Careers extends Component {
         )
       });
     }
-    if (this.state == null) {
+    else {
     const { careers, deleteCareer, showCareer} = this.props;
     var careerList = careers.map(career => {
       return (
