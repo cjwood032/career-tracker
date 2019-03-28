@@ -34,7 +34,7 @@ class DetailInput extends Component {
           Contact Name:<input type="text" name="name" value={name} onChange={this.handleChange}/>
           Title:<input type="text" name="role" value={role} onChange={this.handleChange}/>
           Email:<input type="text" name="email" value={email} onChange={this.handleChange}/><br/>
-          {/* Date of last update:<input type="date" name="updated" value={updated} onChange={this.handleChange}/> */}
+          {/* <input type="date" style ={{display: 'none'}} name="updated" value={updated} onChange={this.handleChange}/>  */}
           
           Action: 
           <select value={action} onChange={this.handleChange}>

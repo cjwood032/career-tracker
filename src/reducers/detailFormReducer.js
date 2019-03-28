@@ -4,7 +4,14 @@ const initialState = {
     contacted: "2019-01-01",
     email: '',
     name: '',
-    role: ''
+    role: '',
+    action: 'Net1',
+    method: 'person',
+    first: 'yes',
+    referral: '',
+    jobTitle: '',
+    jobLink: '',
+    notes: ''
   }
   function detailFormReducer(state = initialState, action) {
      switch(action.type) {
