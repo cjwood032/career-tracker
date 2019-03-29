@@ -71,15 +71,14 @@ class DetailInput extends Component {
           <select value={first} onChange={this.handleChange}>
             <option value = "yes">Yes</option>
             <option value = "no">No</option>
-          </select><br/>
-          Notes:<textarea name="notes" value={notes} onChange={this.handleChange} />
-            					Next Step:
+          </select>
+          Next Step:
 					<select value = {step} onChange={this.handleChange}>
 						<option value="Coach">Review with coach</option>
 						<option value="Thankyou">Send thank you email</option>
 						<option value="Followup">Send follow-up email</option>
 						<option value="meet">Try to meet in person</option>
-					</select>
+					</select><br/>
 					Action Complete?<select value={complete} onChange={this.handleChange}>
             <option value = "yes">Yes</option>
             <option value = "no">No</option>
@@ -89,7 +88,8 @@ class DetailInput extends Component {
             <option value = "hold">On Hold - No Clear Next Steps</option>
 						<option value = "cold">Cold - Have not interacted for more than 7 days</option>
 						<option value = "closed">Closed- Rejected or Opportunity No Longer Available</option>
-          </select>
+          </select><br/>
+          Notes:<textarea name="notes" value={notes} onChange={this.handleChange} />
           <input type="submit"/>
         </form>
       </div>
