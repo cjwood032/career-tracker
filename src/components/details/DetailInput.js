@@ -16,7 +16,7 @@ class DetailInput extends Component {
       this.props.createDetail(this.props.detailFormData)
     }
   render() {
-    const {company, action, method, first, updated, referral, jobTitle, jobLink, notes, contacted, email, name, role} = this.props.detailFormData
+    const {company, action, method, first, updated, referral, jobTitle, jobLink, notes, contacted, email, name, role, step, complete, status} = this.props.detailFormData
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit}>
@@ -73,6 +73,23 @@ class DetailInput extends Component {
             <option value = "no">No</option>
           </select><br/>
           Notes:<textarea name="notes" value={notes} onChange={this.handleChange} />
+            					Next Step:
+					<select value = {step} onChange={this.handleChange}>
+						<option value="Coach">Review with coach</option>
+						<option value="Thankyou">Send thank you email</option>
+						<option value="Followup">Send follow-up email</option>
+						<option value="meet">Try to meet in person</option>
+					</select>
+					Action Complete?<select value={complete} onChange={this.handleChange}>
+            <option value = "yes">Yes</option>
+            <option value = "no">No</option>
+          </select>
+					Status:<select value={status} onChange={this.handleChange}>
+            <option value = "warm">Warm - Actively in the interview process</option>
+            <option value = "hold">On Hold - No Clear Next Steps</option>
+						<option value = "cold">Cold - Have not interacted for more than 7 days</option>
+						<option value = "closed">Closed- Rejected or Opportunity No Longer Available</option>
+          </select>
           <input type="submit"/>
         </form>
       </div>
