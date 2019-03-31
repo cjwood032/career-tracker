@@ -24,12 +24,12 @@ class DetailInput extends Component {
           Company:<input type="text" name="company" value={company} onChange={this.handleChange}/>
           Method:
           <select value={method} onChange={this.handleChange}>
-            <option value ="person">In-person</option>
-            <option value ="phone">Phone</option>
-            <option value ="video">Video</option>
-            <option value ="email">Direct Email</option>
-            <option value ="message">LinkedIn Message</option>
-            <option value ="contact">LinkedIn Contact Request</option>
+            <option value ="In-person">In-person</option>
+            <option value ="Phone">Phone</option>
+            <option value ="Video">Video</option>
+            <option value ="Direct Email">Direct Email</option>
+            <option value ="LinkedIn Message">LinkedIn Message</option>
+            <option value ="LinkedIn Contact Request">LinkedIn Contact Request</option>
           </select><br/>
           Contact Name:<input type="text" name="name" value={name} onChange={this.handleChange}/>
           Title:<input type="text" name="role" value={role} onChange={this.handleChange}/>
@@ -38,30 +38,30 @@ class DetailInput extends Component {
           
           Action: 
           <select value={action} onChange={this.handleChange}>
-            <option value ="Net1">Networking: Outreach Email</option>
-            <option value ="Net2">Networking: Meeting</option>
-            <option value ="Net3">Networking: Attended a Meet-Up or Conference (Name and company of contact you met)</option>
-            <option value ="Net4">Networking: Attended a Hackathon (Name and company of contact you met)</option>
-            <option value ="Fup1">Followed Up on Job Application</option>
-            <option value ="Fup2">Followed Up on Conversation or Interview</option>
-            <option value ="Init">Initial Response/Contact from Company</option>
-            <option value ="1Int1">First Interview Scheduled (phone)</option>
-            <option value ="1Int2">First Interview Scheduled (in-person)</option>
-            <option value ="1Int3">First Interview Completed (phone)</option>
-            <option value ="1Int4">First Interview Completed (in-person)</option>
-            <option value ="2Int1">Second Interview Scheduled (phone)</option>
-            <option value ="2Int2">Second Interview Scheduled (in-person)</option>
-            <option value ="2Int3">Second Interview Completed (phone)</option>
-            <option value ="2Int4">Second Interview Completed (in-person)</option>
-            <option value ="3Int1">Third Interview Scheduled (phone)</option>
-            <option value ="3Int2">Third Interview Scheduled (in-person)</option>
-            <option value ="3Int3">Third Interview Completed (phone)</option>
-            <option value ="3Int4">Third Interview Completed (in-person)</option>
-            <option value ="CC1">Code Challenge Sent from Company</option>
-            <option value ="CC2">Code Challenge Completed and Submitted</option>
-            <option value ="Offer">Offer Extended</option>
-            <option value ="Reject">Rejection</option>
-            <option value ="Accepted">Offer Accepted</option>
+            <option value ="Networking: Outreach Email">Networking: Outreach Email</option>
+            <option value ="Networking: Meeting">Networking: Meeting</option>
+            <option value ="Networking: Attended a Meet-Up or Conference (Name and company of contact you met)">Networking: Attended a Meet-Up or Conference (Name and company of contact you met)</option>
+            <option value ="Attended a Hackathon (Name and company of contact you met)">Networking: Attended a Hackathon (Name and company of contact you met)</option>
+            <option value ="Followed Up on Job Application">Followed Up on Job Application</option>
+            <option value ="Followed Up on Conversation or Interview">Followed Up on Conversation or Interview</option>
+            <option value ="Initial Response/Contact from Company">Initial Response/Contact from Company</option>
+            <option value ="First Interview Scheduled (phone)">First Interview Scheduled (phone)</option>
+            <option value ="First Interview Scheduled (in-person)">First Interview Scheduled (in-person)</option>
+            <option value ="First Interview Completed (phone)">First Interview Completed (phone)</option>
+            <option value ="First Interview Completed (in-person)">First Interview Completed (in-person)</option>
+            <option value ="Second Interview Scheduled (phone)">Second Interview Scheduled (phone)</option>
+            <option value ="Second Interview Scheduled (in-person)">Second Interview Scheduled (in-person)</option>
+            <option value ="Second Interview Completed (phone)">Second Interview Completed (phone)</option>
+            <option value ="Second Interview Completed (in-person)">Second Interview Completed (in-person)</option>
+            <option value ="Third Interview Scheduled (phone)">Third Interview Scheduled (phone)</option>
+            <option value ="Third Interview Scheduled (in-person)">Third Interview Scheduled (in-person)</option>
+            <option value ="Third Interview Completed (phone)">Third Interview Completed (phone)</option>
+            <option value ="Third Interview Completed (in-person)">Third Interview Completed (in-person)</option>
+            <option value ="Code Challenge Sent from Company">Code Challenge Sent from Company</option>
+            <option value ="Code Challenge Completed and Submitted">Code Challenge Completed and Submitted</option>
+            <option value ="Offer Extended">Offer Extended</option>
+            <option value ="Rejection">Rejection</option>
+            <option value ="Offer Accepted">Offer Accepted</option>
             <option value ="Other">Other</option>
           </select><br/>
           Source/Referral:<input type="text" name="referral" value={referral} onChange={this.handleChange}/>
