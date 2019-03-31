@@ -74,20 +74,20 @@ class DetailInput extends Component {
           </select>
           Next Step:
 					<select value = {step} onChange={this.handleChange}>
-						<option value="Coach">Review with coach</option>
-						<option value="Thankyou">Send thank you email</option>
-						<option value="Followup">Send follow-up email</option>
-						<option value="meet">Try to meet in person</option>
+						<option value="Review with Coach">Review with coach</option>
+						<option value="Send thank you email">Send thank you email</option>
+						<option value="Send follow-up email">Send follow-up email</option>
+						<option value="Try to meet in person">Try to meet in person</option>
 					</select><br/>
 					Action Complete?<select value={complete} onChange={this.handleChange}>
             <option value = "yes">Yes</option>
             <option value = "no">No</option>
           </select>
 					Status:<select value={status} onChange={this.handleChange}>
-            <option value = "warm">Warm - Actively in the interview process</option>
-            <option value = "hold">On Hold - No Clear Next Steps</option>
-						<option value = "cold">Cold - Have not interacted for more than 7 days</option>
-						<option value = "closed">Closed- Rejected or Opportunity No Longer Available</option>
+            <option value = "Warm - Actively in the interview process">Warm - Actively in the interview process</option>
+            <option value = "On Hold - No Clear Next Steps">On Hold - No Clear Next Steps</option>
+						<option value = "Cold - Have not interacted for more than 7 days">Cold - Have not interacted for more than 7 days</option>
+						<option value = "Closed- Rejected or Opportunity No Longer Available">Closed- Rejected or Opportunity No Longer Available</option>
           </select><br/>
           Notes:<textarea name="notes" value={notes} onChange={this.handleChange} />
           <input type="submit"/>
