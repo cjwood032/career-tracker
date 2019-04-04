@@ -16,11 +16,11 @@ class DetailInput extends Component {
       this.props.createDetail(this.props.detailFormData)
     }
   render() {
-    const {company, action, method, first, updated, referral, jobTitle, jobLink, notes, contacted, email, name, role, step, complete, status} = this.props.detailFormData
+    const {company, action, method, first_contact, update_date, referral, job_title, job_link, notes, contact_date, contact_email, contact_name, contact_title, step, complete, status} = this.props.detailFormData
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit}>
-          Date:<input type="date" name="contacted" value={contacted} onChange={this.handleChange}/>
+          Date:<input type="date" name="contact_date" value={contact_date} onChange={this.handleChange}/>
           Company:<input type="text" name="company" value={company} onChange={this.handleChange}/>
           Method:
           <select value={method} onChange={this.handleChange}>
@@ -31,10 +31,10 @@ class DetailInput extends Component {
             <option value ="LinkedIn Message">LinkedIn Message</option>
             <option value ="LinkedIn Contact Request">LinkedIn Contact Request</option>
           </select><br/>
-          Contact Name:<input type="text" name="name" value={name} onChange={this.handleChange}/>
-          Title:<input type="text" name="role" value={role} onChange={this.handleChange}/>
-          Email:<input type="text" name="email" value={email} onChange={this.handleChange}/><br/>
-          {/* <input type="date" style ={{display: 'none'}} name="updated" value={updated} onChange={this.handleChange}/>  */}
+          Contact Name:<input type="text" name="contact_name" value={contact_name} onChange={this.handleChange}/>
+          Title:<input type="text" name="contact_title" value={contact_title} onChange={this.handleChange}/>
+          Email:<input type="text" name="contact_email" value={contact_email} onChange={this.handleChange}/><br/>
+          {/* <input type="date" style ={{display: 'none'}} name="update_date" value={update_date} onChange={this.handleChange}/>  */}
           
           Action: 
           <select value={action} onChange={this.handleChange}>
@@ -65,10 +65,10 @@ class DetailInput extends Component {
             <option value ="Other">Other</option>
           </select><br/>
           Source/Referral:<input type="text" name="referral" value={referral} onChange={this.handleChange}/>
-          Job Title:<input type="text" name="job title" value={jobTitle} onChange={this.handleChange}/>
-          Link:<input type="text" name="job link" value={jobLink} onChange={this.handleChange}/>
+          Job Title:<input type="text" name="job title" value={job_title} onChange={this.handleChange}/>
+          Link:<input type="text" name="job link" value={job_link} onChange={this.handleChange}/>
           <br/>First time you are contacting this company/contact?
-          <select value={first} onChange={this.handleChange}>
+          <select value={first_contact} onChange={this.handleChange}>
             <option value = "yes">Yes</option>
             <option value = "no">No</option>
           </select>
