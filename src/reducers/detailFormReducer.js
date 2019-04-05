@@ -1,16 +1,16 @@
 const initialState = {
     company: '',
-    updated: "2019-01-01",
-    contacted: "2019-01-01",
-    email: '',
-    name: '',
-    role: '',
-    action: 'Net1',
-    method: 'person',
+    update_date: "2019-01-01",
+    contact_date: "2019-01-01",
+    contact_email: '',
+    contact_name: '',
+    contact_title: '',
+    action: 'Initial Response/Contact from Company',
+    method: 'In-person',
     first: 'yes',
     referral: '',
-    jobTitle: '',
-    jobLink: '',
+    job_title: '',
+    job_link: '',
     notes: ''
   }
   function detailFormReducer(state = initialState, action) {

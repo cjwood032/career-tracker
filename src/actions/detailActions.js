@@ -25,6 +25,7 @@ export const fetchDetails = () => {
     };
 }
 export const createDetail = (detail) => {
+    debugger
     return (dispatch) => {
         return fetch('http://localhost:3001/api/details', { 
             method: 'POST',
