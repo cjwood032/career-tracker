@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Career from './Career'
+import "./Career.css"
 
 class Careers extends Component {
  
@@ -59,12 +60,13 @@ class Careers extends Component {
     });
   }
     return(
-    <div> <button onClick={this.onClick} >Sort</button>
+    <div>
+    <div className="button-row"> <button onClick={this.onClick} >Sort</button></div>
       <div className="row">
        
           {careerList}
       </div>
-    </div>
+      </div>
     );
   }
 };
