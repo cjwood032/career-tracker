@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {createCareer} from '../../actions/careerActions'
 import {updateFormData} from '../../actions/formActions'
+import "./CareerInput.css"
 class CareerInput extends Component {
 
 

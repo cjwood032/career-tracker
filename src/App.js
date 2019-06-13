@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="flex-container">
           <Router>
-            <div>
+            <div className="main">
               <Header />
               <Main />
             </div>
