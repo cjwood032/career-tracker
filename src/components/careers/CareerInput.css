@@ -2,8 +2,12 @@ form{
 width: 100%;
 margin-left: 50px;
 margin-right: 50px;
-color: #fff;
+color: #888;
+}
+input, select{
+    color: #000;
 }
 input:focus{
-    background-color: #aaf;
+    background-color: #cdcdff;
+    color: #500;
 }
