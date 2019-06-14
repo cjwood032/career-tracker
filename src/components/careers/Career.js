@@ -13,8 +13,8 @@ class Career extends Component {
     return (
       <div className="career">
           {career.title}  <br/>{career.company}<br/><a href = {career.link}>link</a><br/>
-          <div className="CareerName"><button ><Link to={`/Careers/${career.id}`} >Show</Link></button></div>
-          <button className="btn-sm btn-danger" onClick={this.handleClick}> Delete </button>
+          <div className="CareerName"><button className="btn-sm btn-link"><Link to={`/Careers/${career.id}`} >Show</Link></button> <button className="btn-sm btn-danger" onClick={this.handleClick}> Delete </button></div>
+         
       </div>
     );
   }

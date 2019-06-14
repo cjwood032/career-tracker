@@ -1,6 +1,8 @@
-
+*{
+    color: #aaf;
+}
 .button-row button{
-    width: 100%;
+    width: 10%;
     background: #111;
     color: #aaf;
 }
@@ -9,9 +11,11 @@
 }
 .career{
     font-size: 1.10rem;
+    border-color: #fff;
     margin: 10px;
     color: #aaf;
     justify-content: center;
+    
 }
 .row{
     justify-content: center;
