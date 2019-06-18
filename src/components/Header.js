@@ -1,27 +1,31 @@
 import React from 'react';
-
+import './Header.css';
 import { Link } from 'react-router-dom';
 
    const Header = () => (
-     <header>
-      <div className="nav">
-        <div className="nav-heading">
-          <div className="nav-title">
-          </div>
-          </div>
-          <nav className="navbar navbar-expand-lg navbar-dark">
-          <h3 className ="navbar-brand">Career Tracker</h3>
-           <div className="collapse navbar-collapse" id="nav-links">
-            <ul className="navbar-nav">
-              <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/About">About</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/Careers">Careers</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/Details">Contacts</Link></li>
-            </ul>
-            </div>
-          </nav>
-      </div>
-     </header>
+   
+    <header class="header">
+      <div class="header__text-box">
+      <h1 class ="heading-primary">Career Tracker</h1>
+       
+         <span class="heading-primary--top">
+          <div class="heading-primary--left"><Link className="nav-link" to="/">Home</Link></div>
+        <div class="heading-primary--right"><Link className="nav-link" to="/About">About</Link></div>
+        </span>
+        
+        <span class="heading-primary--bot">
+          <div class="heading-primary--left"><Link className="nav-link" to="/Careers">Careers</Link></div>
+          <div class="heading-primary--right"><Link className="nav-link" to="/Details">Contacts</Link></div>
+        </span>
+        </div>
+      
+    
+      <script src="img/babel.min.js"></script>
+      <script src="img/react.min.js"></script>
+      <script src="img/react-dom.min.js"></script>
+      <script src="script.js" type="text/babel"></script>
+    </header>
+   
    )
 
 
