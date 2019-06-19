@@ -17,20 +17,3 @@
     margin-left: 0;
     margin-right: 0;
 }
-.nav{
-    background-color: black;
-    text-align: center;
-}
-.navbar-expand-lg.navbar-dark{
-    width: 100%;
-    font-family: 'Courier New', Courier, monospace;
-    align-items: center;
-}
-#nav-links.collapse.navbar-collapse{
-    justify-content: center;
-    font-size: calc(15px + 2vmin);
-}
-h3.navbar-brand{
-    margin: 0;
-
-}

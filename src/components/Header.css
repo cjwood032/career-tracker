@@ -29,10 +29,11 @@ body {
 
 .header {
 	height: 30vh;
-background-image: linear-gradient(to right bottom, rgba(144, 144, 144, 0.4), rgba(245, 245, 245, 0.4)), url(https://images.unsplash.com/photo-1516618317270-b99d1715c58d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
-	background-size: cover;
+background-image: linear-gradient(to right bottom, rgba(144, 144, 144, 0.4), rgba(245, 245, 245, 0.4)), url(https://media.istockphoto.com/photos/metal-wheel-concept-picture-id870006458);
+	background-size: contain;
+	
 	background-position: top;
-	clip-path: ellipse(50% 50% at 50% 50%);
+	clip-path: ellipse(30% 50% at 50% 50%);
 }
 img{	
 	display: inline;
