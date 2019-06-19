@@ -6,13 +6,11 @@ position: absolute;
 	text-align: center;
 	color: #8bb
 }
-.header{
-	
-	
-}
+
 
 input[type="text"],
-input[type="url"]
+input[type="url"],
+textarea
  {
   width: 100%;
   position: relative;
@@ -29,6 +27,11 @@ input[type="url"]
 }
 
 
-input[type="text"]:focus ~ label, input[type="text"]:valid ~ label {
-  top: -60px;
+input[type="text"]:focus,
+textarea:focus,
+input[type="url"]:focus {
+  color: #fff;
+}
+input[type="submit"]{
+  background-color: #000;
 }

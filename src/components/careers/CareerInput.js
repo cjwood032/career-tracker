@@ -20,7 +20,7 @@ class CareerInput extends Component {
     const {title, company, link, location, description} = this.props.formData
     return (
       <div>
-        <center><b>Add an Opening:</b>
+        <center><h2>Add an Opening:</h2>
         <form className="CareerForm" onSubmit={this.handleSubmit}>
           Title<input type="text" name="title" value={title} onChange={this.handleChange}/>
           Company<input type="text" name="company" value={company} onChange={this.handleChange}/>
