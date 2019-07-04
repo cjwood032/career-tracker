@@ -22,7 +22,7 @@ body {
 	font-weight: 400;
 	box-sizing: border-box;
 	line-height: 1.7;
-	color: #FF0B0B;
+	
     padding: 2rem;
         
 }
@@ -41,6 +41,7 @@ img{
 }
 .header__text-box{
 	position: absolute;
+	color: #f02;
 	top: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -49,11 +50,12 @@ img{
 
 .heading-primary{
 	display: inline-block;
+	font-weight: 600;
 	text-transform: uppercase;
 	margin-bottom: 1.5rem;
 	position: relative;
 	bottom: -10%;
-	
+	background-color: rgba(0,0,0,.4);
 }
 .heading-primary--top{
 	display: block;
