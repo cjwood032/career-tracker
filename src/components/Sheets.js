@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {fetchSheets} from '../actions/sheetActions'
 
 class Sheets extends Component {
     loadAPI= event => {
         event.preventDefault();
-        console.log("Loading");   
+        this.props.fetchSheets()
     }
     saveAPI= event => {
         event.preventDefault();
@@ -19,6 +20,15 @@ class Sheets extends Component {
             </div>
         )
     }
-
+    
 }
-export default (Sheets)
+const mapStateToProps = state => {
+    return ({
+      sheets: state.sheets
+    })
+  }
+const mapDispatchToProps = dispatch => {
+    return {
+      fetchSheets: () => dispatch(fetchSheets())
+  }}
+export default connect(mapStateToProps, mapDispatchToProps)(Sheets)
