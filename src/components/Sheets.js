@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {fetchSheets} from '../actions/sheetActions'
+import {saveSheets} from '../actions/sheetActions'
 
 class Sheets extends Component {
     loadAPI= event => {
         event.preventDefault();
-        this.props.fetchSheets()
+        this.props.fetchSheets();
     }
     saveAPI= event => {
         event.preventDefault();
-        console.log("Saving");
+        this.props.saveSheets();
     }
     render () {
         return (
@@ -29,6 +30,7 @@ const mapStateToProps = state => {
   }
 const mapDispatchToProps = dispatch => {
     return {
-      fetchSheets: () => dispatch(fetchSheets())
+      fetchSheets: () => dispatch(fetchSheets()),
+      saveSheets: () => dispatch(saveSheets())
   }}
 export default connect(mapStateToProps, mapDispatchToProps)(Sheets)

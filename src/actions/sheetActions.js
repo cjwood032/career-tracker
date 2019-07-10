@@ -6,3 +6,9 @@
         .catch(error => console.log(error))
     };
 }
+export const saveSheets = () => {
+    return (dispatch) => {
+        return fetch('http://localhost:3001/api/API/export')
+        .then(response=>response.json())
+    }
+}
