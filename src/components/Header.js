@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
    
     <header class="header">
       <div class="header__text-box">
-      <h1 class ="heading-primary">Career Tracker</h1>
+      <h1 class ="heading-primary"><div class="heading-primary--left"><Link className="nav-link" to="/">Career Tracker</Link></div></h1>
        
          <span class="heading-primary--top">
-          <div class="heading-primary--left"><Link className="nav-link" to="/">Home</Link></div>
+          
+          <div class="heading-primary--right"><Link className="nav-link" to="/Interviews">Interviews</Link></div>
         <div class="heading-primary--right"><Link className="nav-link" to="/About">About</Link></div>
         </span>
         
