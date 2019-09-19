@@ -38,7 +38,7 @@ class DetailInput extends Component {
           
           Action: 
           <select value={action} onChange={this.handleChange}>
-            <option value ="Networking: Outreach Email">Networking: Outreach Email</option>
+            <option value = "Networking: Outreach Email">Networking: Outreach Email</option>
             <option value ="Networking: Meeting">Networking: Meeting</option>
             <option value ="Networking: Attended a Meet-Up or Conference (Name and company of contact you met)">Networking: Attended a Meet-Up or Conference (Name and company of contact you met)</option>
             <option value ="Attended a Hackathon (Name and company of contact you met)">Networking: Attended a Hackathon (Name and company of contact you met)</option>
