@@ -18,7 +18,7 @@ const setCareers = careers => {
 
 export const fetchCareers = () => {
     return (dispatch) => {
-        return fetch('http://localhost:3001/api/careers')
+        return fetch('http://localhost:3001/api/v1/careers')
         .then(response => response.json())
         .then(careers => dispatch(setCareers(careers)))
         .catch(error => console.log(error))
@@ -27,7 +27,7 @@ export const fetchCareers = () => {
 
 export const createCareer = (career) => {
     return (dispatch) => {
-        return fetch('http://localhost:3001/api/careers', { 
+        return fetch('http://localhost:3001/api/v1/careers', { 
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

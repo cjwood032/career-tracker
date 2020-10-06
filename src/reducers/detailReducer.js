@@ -8,7 +8,7 @@ function detailsReducer(state = [], action) {
         return action.details
 
       case 'DELETE_DETAIL':
-      fetch( 'http://localhost:3001/api/details/' + action.id, {
+      fetch( 'http://localhost:3001/api/v1/details/' + action.id, {
         method: 'delete'})
         const details = state.filter(detail => detail.id !== action.id);
         return  details 

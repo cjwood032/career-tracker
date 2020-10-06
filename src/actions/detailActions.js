@@ -18,7 +18,7 @@ const setDetails = details => {
 export const fetchDetails = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_DETAILS'})
-        return fetch('http://localhost:3001/api/details')
+        return fetch('http://localhost:3001/api/v1/details')
         .then(response => response.json())
         .then(details => dispatch(setDetails(details)))
         .catch(error => console.log(error))
@@ -27,7 +27,7 @@ export const fetchDetails = () => {
 export const createDetail = (detail) => {
     //debugger
     return (dispatch) => {
-        return fetch('http://localhost:3001/api/details', { 
+        return fetch('http://localhost:3001/api/v1/details', { 
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

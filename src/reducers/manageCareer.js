@@ -5,7 +5,7 @@ function careersReducer(state = [], action) {
         return state.concat(action.career)
         
       case 'DELETE_CAREER':
-        fetch( 'http://localhost:3001/api/careers/' + action.id, {
+        fetch( 'http://localhost:3001/api/v1/careers/' + action.id, {
         method: 'delete'})
         const careers = state.filter(career => career.id !== action.id);
         return careers
