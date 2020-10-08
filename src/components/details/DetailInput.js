@@ -8,6 +8,7 @@ import {updateDetailFormData} from '../../actions/formActions'
 class DetailInput extends Component {
   handleChange = event => {
     const currentFormData = Object.assign({}, this.props.detailFormData, {[event.target.name]: event.target.value})
+    debugger
       this.props.updateDetailFormData(currentFormData)
     }
 
@@ -20,9 +21,9 @@ class DetailInput extends Component {
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit}>
-          Date:<input type="date" name="contact_date" value={contact_date} onChange={this.handleChange}/>
-          Company:<input type="text" name="company" value={company} onChange={this.handleChange}/>
-          Method:
+         <div class="row"> Date:<input type="date" name="contact_date" value={contact_date} onChange={this.handleChange}/></div>
+          <div class="row">Company:<input type="text" name="company" value={company} onChange={this.handleChange}/></div>
+          <div class="row">Method:
           <select value={method} onChange={this.handleChange}>
             <option value ="In-person">In-person</option>
             <option value ="Phone">Phone</option>
@@ -30,12 +31,12 @@ class DetailInput extends Component {
             <option value ="Direct Email">Direct Email</option>
             <option value ="LinkedIn Message">LinkedIn Message</option>
             <option value ="LinkedIn Contact Request">LinkedIn Contact Request</option>
-          </select><br/>
-          Contact Name:<input type="text" name="contact_name" value={contact_name} onChange={this.handleChange}/>
-          Title:<input type="text" name="contact_title" value={contact_title} onChange={this.handleChange}/>
-          Email:<input type="text" name="contact_email" value={contact_email} onChange={this.handleChange}/><br/>
+          </select></div>
+          <div class="row">Contact Name:<input type="text" name="contact_name" value={contact_name} onChange={this.handleChange}/></div>
+          <div class="row">Title:<input type="text" name="contact_title" value={contact_title} onChange={this.handleChange}/></div>
+          <div class="row">Email:<input type="text" name="contact_email" value={contact_email} onChange={this.handleChange}/></div>
           {/* <input type="date" style ={{display: 'none'}} name="update_date" value={update_date} onChange={this.handleChange}/>  */}
-          
+          <div class="row">
           Action: 
           <select value={action} onChange={this.handleChange}>
             <option value = "Networking: Outreach Email">Networking: Outreach Email</option>
@@ -63,33 +64,33 @@ class DetailInput extends Component {
             <option value ="Rejection">Rejection</option>
             <option value ="Offer Accepted">Offer Accepted</option>
             <option value ="Other">Other</option>
-          </select><br/>
-          Source/Referral:<input type="text" name="referral" value={referral} onChange={this.handleChange}/>
-          Job Title:<input type="text" name="job title" value={job_title} onChange={this.handleChange}/>
-          Link:<input type="text" name="job link" value={job_link} onChange={this.handleChange}/>
-          <br/>First time you are contacting this company/contact?
+          </select></div>
+          <div class="row">Source/Referral:<input type="text" name="referral" value={referral} onChange={this.handleChange}/></div>
+          <div class="row">Job Title:<input type="text" name="job_title" value={job_title} onChange={this.handleChange}/></div>
+          <div class="row">Link:<input type="text" name="job_link" value={job_link} onChange={this.handleChange}/></div>
+          <div class="row">First time you are contacting this company/contact?
           <select value={first_contact} onChange={this.handleChange}>
             <option value = "yes">Yes</option>
             <option value = "no">No</option>
-          </select>
-          Next Step:
+          </select></div>
+          <div class="row">Next Step:
 					<select value = {step} onChange={this.handleChange}>
 						<option value="Review with Coach">Review with coach</option>
 						<option value="Send thank you email">Send thank you email</option>
 						<option value="Send follow-up email">Send follow-up email</option>
 						<option value="Try to meet in person">Try to meet in person</option>
-					</select><br/>
-					Action Complete?<select value={complete} onChange={this.handleChange}>
+					</select></div>
+					<div class="row">Action Complete?<select value={complete} onChange={this.handleChange}>
             <option value = "yes">Yes</option>
             <option value = "no">No</option>
-          </select>
-					Status:<select value={status} onChange={this.handleChange}>
+          </select></div>
+					<div class="row">Status:<select value={status} onChange={this.handleChange}>
             <option value = "Warm - Actively in the interview process">Warm - Actively in the interview process</option>
             <option value = "On Hold - No Clear Next Steps">On Hold - No Clear Next Steps</option>
 						<option value = "Cold - Have not interacted for more than 7 days">Cold - Have not interacted for more than 7 days</option>
 						<option value = "Closed- Rejected or Opportunity No Longer Available">Closed- Rejected or Opportunity No Longer Available</option>
-          </select><br/>
-          Notes:<textarea name="notes" value={notes} onChange={this.handleChange} />
+          </select></div>
+          <div class="row">Notes:<textarea name="notes" value={notes} onChange={this.handleChange} /></div>
           <input type="submit"/>
         </form>
       </div>

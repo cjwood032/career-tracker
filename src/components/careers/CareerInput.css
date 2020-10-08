@@ -17,21 +17,27 @@ textarea
   display: inline-block;
   font-size: 1.25em;
   padding: 0 0 5px 0;
-  color: #226D62;
-  background-color: transparent;
   border: none;
   border-bottom: solid 2px #4DB6AC;
   outline: none;
   z-index: 20;
 	text-align: center;
 }
-
+input,
+select,
+textarea{
+    color: #4DB6AC;
+    background-color: #111;
+}
+input[type=submit]{
+    background-color: #123 !important;
+    padding: 1rem 2rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
 
 input[type="text"]:focus,
 textarea:focus,
 input[type="url"]:focus {
   color: #fff;
-}
-input[type="submit"]{
-  background-color: #000;
 }

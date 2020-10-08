@@ -40,50 +40,58 @@ img{
 	clip-path: ellipse(40% 25% at 50% 50%); 
 }
 .header__text-box{
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+	height: 30vh;
 	position: absolute;
-	color: #f02;
-	top: 10%;
+	top: 15%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	text-align: center;
+	align-content: center;
 }
 
 .heading-primary{
 	display: inline-block;
 	font-weight: 600;
 	text-transform: uppercase;
-	margin-bottom: 1.5rem;
+	
 	position: relative;
-	bottom: -10%;
-	background-color: rgba(0,0,0,.4);
+	
+ 
 }
 .heading-primary--top{
-	display: block;
+	display: inline-block;
 	font-size: 1.5rem;
 	font-weight: 900;
 	letter-spacing: .25rem;
-	animation: moveInLeft 3s;
+	
 	position: absolute;
-	left: -25%;
+	top: -2rem;
 }
 .heading-primary--bot{
-	display: block;
+	display: inline-block;
 	font-size: 1.5rem;
 	font-weight: 900;
 	letter-spacing: .25rem;
-	animation: moveInRight 3s;
-	position: absolute;
-	right: -25%;
-}
-/*
-.heading-primary--left{
+	
 	position: relative;
-	left: -50%;
+	top: 2rem;
+	
+}
+
+.heading-primary--left{
+	position: absolute;
+	animation: moveInLeft 3s;
+	float: left;
+	transform: translate(-26rem,5rem);
 }
 .heading-primary--right{
-	position: relative;
-	right: -50%;
-} */
+	position: absolute;
+	float:right;
+	animation: moveInRight 3s;
+	transform: translate(4rem,5rem);
+	
+} 
 .header__logo-box{
 	position: absolute;
 	top: 4rem;
@@ -96,22 +104,32 @@ img{
 @keyframes moveInLeft {
 	0% {
 		opacity: 0;
-		transform: translateX(-10rem);
+		transform: translate(-36rem,0);
 	}
 	100% {
 		opacity: 1;
-		transform: translate(0);
+		transform: translate(-26rem,5rem);
 	}
 }
 @keyframes moveInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(10rem);
+		transform: translate(10rem,0);
 	}
 	100% {
 		opacity: 1;
-		transform: translate(0);
+		transform: translate(4rem,5rem);
 	}
+}
+.nav-link{
+	text-decoration: none;
+	display: inline;
+	color: lightblue;
+	padding: 1rem;
+	border-radius: 50%;
+	font-size: 1.2rem;
+	font-weight: 400;
+	background-color: black;
 }
 .btn:link,
 .btn:visited {

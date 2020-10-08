@@ -17,6 +17,7 @@ const initialState = {
      switch(action.type) {
 
       case 'UPDATE_DETAIL_FORM_DATA':
+        debugger
         return action.detailFormData
        
       case 'RESET_DETAIL_FORM':
