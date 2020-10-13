@@ -7,7 +7,6 @@ export const updateFormData = formData => {
   
   
   export const updateDetailFormData = detailFormData => {
-    debugger
     return {
       type: 'UPDATE_DETAIL_FORM_DATA',
       detailFormData

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Detail.css'
+import './DetailInput.css'
 import {connect} from 'react-redux';
 import {createDetail} from '../../actions/detailActions'
 import {updateDetailFormData} from '../../actions/formActions'
@@ -8,7 +8,6 @@ import {updateDetailFormData} from '../../actions/formActions'
 class DetailInput extends Component {
   handleChange = event => {
     const currentFormData = Object.assign({}, this.props.detailFormData, {[event.target.name]: event.target.value})
-    debugger
       this.props.updateDetailFormData(currentFormData)
     }
 
