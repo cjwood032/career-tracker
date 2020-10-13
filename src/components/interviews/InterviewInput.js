@@ -24,7 +24,7 @@ class InterviewInput extends Component {
         <form className="InterviewForm" onSubmit={this.handleSubmit}>
           Title<input type="text" name="name" value={name} onChange={this.handleChange}/>
           Company<input type="text" name="company" value={company} onChange={this.handleChange}/>
-          Appointment time<input type="datetime-local" name="date" value={date} onChange={this.handleChange}/>
+          Appointment Time<input type="datetime-local" name="date" value={date} onChange={this.handleChange}/>
           Job Title<input type="text" name="job_title" value={job_title} onChange={this.handleChange}/><br/>
           Requirements<textarea name="requirements" value={requirements} onChange={this.handleChange} />
           Description<textarea name="job_description" value={job_description} onChange={this.handleChange} />

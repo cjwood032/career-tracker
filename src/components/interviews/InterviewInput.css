@@ -1,0 +1,38 @@
+.interview-form{
+    position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #8bb
+    }
+    
+    
+    input[type="text"],
+    input[type="url"],
+    textarea
+     {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      font-size: 1.25em;
+      padding: 0 0 5px 0;
+      border: none;
+      border-bottom: solid 2px #4DB6AC;
+      outline: none;
+      z-index: 20;
+        text-align: center;
+    }
+    input,
+    select,
+    textarea{
+        color: #4DB6AC !important;
+        background-color: #111 !important;
+    }
+    input[type=submit]{
+        background-color: #123 !important;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+    
