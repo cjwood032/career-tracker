@@ -23,12 +23,14 @@ class Interviews extends Component {
     else {
     const { interviews, deleteInterview, showInterview} = this.props;
     var interviewList = interviews.map(interview => {
+      debugger
       return (
         <div className="col-sm-3" key={interview.id}><center>
         <Interview
             key={interview.id}
             interview={interview}
-            title={interview.title}
+            company={interview.company}
+            date={interview.date}
             deleteInterview={deleteInterview}
             showInterview={showInterview}
         /></center>

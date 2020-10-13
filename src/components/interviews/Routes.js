@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import FullInterview from './FullInterview'
+import InterviewFull from './InterviewFull'
 import InterviewInput from './InterviewInput'
 import InterviewsContainer from '../../containers/InterviewsContainer';
 
@@ -10,7 +10,7 @@ render () {
         <div>
             <Switch>
                 <Route exact path="/Interviews/InterviewInput" component={InterviewInput}/>
-                <Route path="/Interviews/:id" component={FullInterview} />
+                <Route path="/Interviews/:id" component={InterviewFull} />
                 <Route exact path="/Interviews" component={InterviewsContainer}/>
             </Switch>
         </div>

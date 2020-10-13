@@ -13,7 +13,7 @@ componentDidMount(){
     return (
       <div className="interviewContainer">
         <InterviewInput />
-        {/*<Interviews interviews={this.props.interviews} showInterview= {this.props.showInterview} deleteInterview={this.props.deleteInterview}/>*/}
+        <Interviews interviews={this.props.interviews} showInterview= {this.props.showInterview} deleteInterview={this.props.deleteInterview}/>
       </div>
     )
   }

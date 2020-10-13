@@ -12,7 +12,7 @@ class Interview extends Component {
     const { interview } = this.props;
     return (
       <div className="interview">
-          {interview.title}  <br/>{interview.company}<br/><a href = {interview.link}>link</a><br/>
+          <h3>{interview.date}</h3><div class="row">{interview.company}</div>
           <div className="InterviewName"><button className="btn-sm btn-link"><Link to={`/Interviews/${interview.id}`} >Show</Link></button> <button className="btn-sm btn-danger" onClick={this.handleClick}> Delete </button></div>
          
       </div>

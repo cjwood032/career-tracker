@@ -4,7 +4,7 @@ import About from '../components/About';
 import { Route, Switch } from 'react-router-dom';
 import CareerRoutes from '../components/careers/Routes'
 import DetailsContainer from '../containers/DetailsContainer'
-import InterviewsContainer from '../containers/InterviewsContainer'
+import InterviewRoutes from '../components/interviews/Routes'
 const Main = () => (
         <main>
         <Switch>
@@ -12,7 +12,7 @@ const Main = () => (
           <Route path="/Careers" component={CareerRoutes} />
           <Route path ="/About" component={About} />
           <Route path ="/Details" component={DetailsContainer} />
-          <Route path ="/Interviews" component={InterviewsContainer} />
+          <Route path ="/Interviews" component={InterviewRoutes} />
           </Switch>
         </main>
 )
