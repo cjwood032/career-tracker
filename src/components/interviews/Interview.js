@@ -13,7 +13,7 @@ class Interview extends Component {
     return (
       <div className="interview">
           <h3>{interview.date}</h3><div class="row">{interview.company}</div>
-          <div className="InterviewName"><button className="btn-sm btn-link"><Link to={`/Interviews/${interview.id}`} >Show</Link></button> <button className="btn-sm btn-danger" onClick={this.handleClick}> Delete </button></div>
+          <div className="InterviewName"><button className="btn-sm btn-white"><Link to={`/Interviews/${interview.id}`} >Show</Link></button> <button className="btn-sm btn-danger" onClick={this.handleClick}> Delete </button></div>
          
       </div>
     );

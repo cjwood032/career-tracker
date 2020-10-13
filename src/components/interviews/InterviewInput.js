@@ -20,8 +20,9 @@ class InterviewInput extends Component {
     const {company, name, date, job_title, requirements, job_description, notes, reviews, about_company} = this.props.interviewFormData
     return (
       <div>
+        
+        <form className="interview-form" onSubmit={this.handleSubmit}>
         <h2>Plan an Interview:</h2>
-        <form className="InterviewForm" onSubmit={this.handleSubmit}>
           <div class="row">Name<input type="text" name="name" value={name} onChange={this.handleChange}/></div>
           <div class="row">Company<input type="text" name="company" value={company} onChange={this.handleChange}/></div>
           <div class="row">Interview Time<input type="datetime-local" name="date" value={date} onChange={this.handleChange}/></div>

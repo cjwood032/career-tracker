@@ -18,8 +18,8 @@ class DetailInput extends Component {
   render() {
     const {company, action, method, first_contact, update_date, referral, job_title, job_link, notes, contact_date, contact_email, contact_name, contact_title, step, complete, status} = this.props.detailFormData
     return (
-      <div className="container">
-        <form onSubmit={this.handleSubmit}>
+      <div>
+        <form className="detail-form" onSubmit={this.handleSubmit}>
          <div class="row"> Date:<input type="date" name="contact_date" value={contact_date} onChange={this.handleChange}/></div>
           <div class="row">Company:<input type="text" name="company" value={company} onChange={this.handleChange}/></div>
           <div class="row">Method:

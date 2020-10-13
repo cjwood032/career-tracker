@@ -1,10 +1,7 @@
-.career-form{
-    position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #8bb
+.detail-form{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
     }
     
     
@@ -12,7 +9,7 @@
     input[type="url"],
     textarea
      {
-      width: 100%;
+      width: 80%;
       position: relative;
       display: inline-block;
       font-size: 1.25em;

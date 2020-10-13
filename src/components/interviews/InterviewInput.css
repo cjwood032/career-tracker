@@ -1,11 +1,9 @@
 .interview-form{
-    position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #8bb
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
     }
+    
     
     
     input[type="text"],

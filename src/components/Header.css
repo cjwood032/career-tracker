@@ -6,26 +6,7 @@ dark green: #28b485
 */
 
 
-*,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-}
-html {
-	font-size: 100%;
-}
-body {
-	background-color: #000;
-	font-family: "Lato", san-serif;
-	font-weight: 400;
-	box-sizing: border-box;
-	line-height: 1.7;
-	
-    padding: 2rem;
-        
-}
+
 
 .header {
 	height: 30vh;
@@ -66,7 +47,7 @@ img{
 	letter-spacing: .25rem;
 	
 	position: absolute;
-	top: -2rem;
+	top: 0;
 }
 .heading-primary--bot{
 	display: inline-block;
@@ -75,7 +56,7 @@ img{
 	letter-spacing: .25rem;
 	
 	position: relative;
-	top: 2rem;
+	top: 4rem;
 	
 }
 
